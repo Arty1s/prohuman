@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root { --background: #fbfaf7; --foreground: #171512; }
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: Georgia, "Times New Roman", serif; }
+button, nav, time { font: inherit; }
+button, a { color: inherit; }
+button { cursor: pointer; background: transparent; }
+a { text-decoration: none; }
+.article-panel { border: 1px solid #d6d3d1; border-radius: 6px; padding: 18px; }
+.article-panel > h2, .article-panel > div > h2 { font-family: Georgia, "Times New Roman", serif; font-size: 16px; font-weight: 700; }
+.article-copy h2 { margin-bottom: 6px; font-family: Georgia, "Times New Roman", serif; font-size: 17px; font-weight: 700; }
+.article-copy section { border-bottom: 1px solid #e2e0dc; padding-bottom: 14px; }
+.article-copy ul { list-style: disc; padding-left: 22px; }
+
+.article-image { background-repeat: no-repeat; background-position: center; background-size: cover; }
+.article-image--microphone { background-image: url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1400&q=85'); }
+.article-image--books { background-image: url('https://images.unsplash.com/photo-1585907620640-096b37d555ee?auto=format&fit=crop&w=1400&q=85'); }
+.article-image--conference { background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1400&q=85'); }
+
+@media (max-width: 1023px) {
+  aside { border-top: 1px solid #d6d3d1; padding-top: 20px; }
+}
+
+@media (max-width: 639px) {
+  .article-image { aspect-ratio: 16 / 9; }
+  article h2 { font-size: 27px; }
+}
